@@ -1,6 +1,23 @@
 <HTML>
+<HEAD>
+<script type="text/javascript">
+
+function say_hello(){
+
+var name= document.getElementById('my_name').value;
+
+if (name!=""){
+	alert("Hello " + name +" !");
+}else{
+	alert("Please enter your name!");
+}
+}
+
+</script>
+</HEAD>
 <BODY>
 <H1>Hello World !</H1>
-<input type='text'></input>
+<input type='text' id='my_name'></input>
+<input type="button" onclick="say_hello()" value="Say hello"/>
 </BODY>
 </HTML>
