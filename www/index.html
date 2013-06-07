@@ -13,13 +13,24 @@ if (name!=""){
 }
 }
 
+function poke_moez(){
+	var msg = "hi from moez";
+	document.getElementById('poke_msg').innerHTML=msg;
+	
+}
+
 </script>
 <script src="jquery.js"></script>
 <script>
-	$(document).ready(	function(){
-			alert("Welcome ! I am your friend - the bot ! Please enter your name");
-		}
-	)
+/*
+$(document).ready(function(){
+  $("a").click(function(){
+    $.get("http://10.33.21.197:3000",function(data,status){
+      alert("Data: " + data + "\nStatus: " + status);
+    });
+  });
+});
+*/
 </script>
 </HEAD>
 <BODY>
@@ -27,8 +38,11 @@ if (name!=""){
 <input type='text' id='my_name'></input>
 <input type="button" onclick="say_hello()" value="Say hello"/>
 <br/>
-<div id="poking">
-<a href="http://10.237.252.82:3000">Poke Moez!</a>
+<div id="poking" rows='2'>
+<input type="button" id="poke_moez" value="Poke Moez!" style="style:20px" onclick="poke_moez()"/>
+<label id="poke_msg" visible='true' value="hey there" style="size:50px"></label>
 </div>
+<br/>
+<a href="http://10.33.22.179:3000/echo?txt='blah'">Poke Moez now!</a>
 </BODY>
 </HTML>
